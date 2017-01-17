@@ -1,7 +1,7 @@
 package com.learn.chapter2;
 
-import com.learn.chapter2.mapper.Role;
 import com.learn.chapter2.mapper.RoleMapper;
+import com.learn.chapter2.po.Role;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
