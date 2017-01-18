@@ -5,6 +5,8 @@ import com.learn.chapter2.po.Role;
 import com.learn.chapter2.util.SqlSessionFactoryUtil;
 import org.apache.ibatis.session.SqlSession;
 
+import java.util.List;
+
 /**
  * Created by bright on 17-1-17.
  */
@@ -17,15 +19,18 @@ public class Chapter2Main {
 
             RoleMapper roleMapper = sqlsession.getMapper(RoleMapper.class);
 
-            Role role = new Role();
-            role.setRoleName("testName");
-            role.setNote("testNote");
+            List<Role> roleList = roleMapper.findRole("testName");
 
-            roleMapper.insertRole(role);
+            System.out.println(roleList);
+//            Role role = new Role();
+//            role.setRoleName("testName");
+//            role.setNote("testNote");
 
-            roleMapper.deleteRole(1L);
-
-            sqlsession.commit();
+//            roleMapper.insertRole(role);
+//
+//            roleMapper.deleteRole(1L);
+//
+//            sqlsession.commit();
 
         }catch (Exception ex){
             System.err.println(ex.getMessage());
