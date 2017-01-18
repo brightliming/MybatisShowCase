@@ -11,6 +11,7 @@
         <!--<typeHandler handler="com.learn.chapter2.typehandler.MyStringTypeHandler" javaType="String" jdbcType="CHAR"/>-->
         <package name="com.learn.chapter2.typehandler"/>
     </typeHandlers>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -22,6 +23,12 @@
             </dataSource>
         </environment>
     </environments>
+    <databaseIdProvider type="DB_VENDOR">
+        <property name="SQL Server" value="sqlserver"/>
+        <property name="MySQL" value="mysql"/>
+        <property name="DB2" value="db2"/>
+        <property name="Oracle" value="oracle"/>
+    </databaseIdProvider>
     <mappers>
         <mapper resource="mapper/roleMapper.xml"/>
     </mappers>
