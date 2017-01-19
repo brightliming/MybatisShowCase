@@ -22,6 +22,8 @@ public class Chapter4Main {
 
             StudentBean studentBean = studentMapper.getStudent(1);
 
+
+            System.out.println(studentBean);
         }catch (Exception ex){
             System.err.println(ex.getMessage());
             sqlsession.rollback();
