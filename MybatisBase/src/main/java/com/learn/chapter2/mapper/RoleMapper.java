@@ -15,4 +15,6 @@ public interface RoleMapper {
     public int deleteRole(Long id);
 
     public int insertRole(Role role);
+
+    public int updateRole(Role role);
 }

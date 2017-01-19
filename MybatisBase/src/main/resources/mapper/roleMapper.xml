@@ -18,9 +18,14 @@
         like concat('%',#{roleName javaType=string,jdbcType=CHAR,
         typeHandler=com.learn.chapter2.typehandler.MyStringTypeHandler},'%')
     </select>
-    <insert id="insertRole" parameterType="role">
+    <insert id="insertRole" parameterType="role" useGeneratedKeys="true" keyProperty="id">
         insert into t_role(role_name,note) values (#{roleName}, #{note})
     </insert>
+    <update id="updateRole" parameterType="role">
+        update t_role set role_name = #{roleName},
+        note = #{note}
+        where id = #{id}
+    </update>
     <delete id="deleteRole" parameterType="long">
         delete from t_role where id = #{id}
     </delete>

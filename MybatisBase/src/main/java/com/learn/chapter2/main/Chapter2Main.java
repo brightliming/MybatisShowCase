@@ -19,18 +19,18 @@ public class Chapter2Main {
 
             RoleMapper roleMapper = sqlsession.getMapper(RoleMapper.class);
 
-            List<Role> roleList = roleMapper.findRole("testName");
+//            List<Role> roleList = roleMapper.findRole("testName");
 
-            System.out.println(roleList);
-//            Role role = new Role();
-//            role.setRoleName("testName");
-//            role.setNote("testNote");
+       //     System.out.println(roleList);
+            Role role = new Role();
+            role.setRoleName("testName2");
+            role.setNote("testNote2");
 
-//            roleMapper.insertRole(role);
-//
-//            roleMapper.deleteRole(1L);
-//
-//            sqlsession.commit();
+            roleMapper.insertRole(role);
+            System.out.println(role.getId());
+          //  roleMapper.deleteRole(1L);
+
+            sqlsession.commit();
 
         }catch (Exception ex){
             System.err.println(ex.getMessage());

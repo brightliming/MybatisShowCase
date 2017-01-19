@@ -33,5 +33,7 @@
     <mappers>
         <mapper resource="mapper/roleMapper.xml"/>
         <mapper resource="mapper/userMapper.xml"/>
+        <mapper resource="mapper/studentMapper.xml"/>
+        <mapper resource="mapper/studentSelfcardMapper.xml"/>
     </mappers>
 </configuration>
