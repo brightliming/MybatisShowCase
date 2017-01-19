@@ -9,6 +9,7 @@
     </typeAliases>
     <typeHandlers>
         <!--<typeHandler handler="com.learn.chapter2.typehandler.MyStringTypeHandler" javaType="String" jdbcType="CHAR"/>-->
+        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="com.learn.chapter3.enums.Sex" />
         <package name="com.learn.chapter2.typehandler"/>
     </typeHandlers>
 
@@ -31,5 +32,6 @@
     </databaseIdProvider>
     <mappers>
         <mapper resource="mapper/roleMapper.xml"/>
+        <mapper resource="mapper/userMapper.xml"/>
     </mappers>
 </configuration>

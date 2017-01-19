@@ -8,7 +8,7 @@
     <resultMap id="roleMap" type="role">
         <id column="id" property="id" javaType="long" jdbcType="INTEGER"/>
         <result column="role_name" property="roleName" javaType="string" jdbcType="CHAR"/>
-        <result column="note" property="note" typeHandler="com.learn.chapter2.typehandler.MyStringTypeHandler"/>
+        <result column="note" property="note"/>
     </resultMap>
     <select id="getRole" parameterType="long" resultMap="roleMap">
         select id,role_name as roleName,note from t_role where id = #{id}
