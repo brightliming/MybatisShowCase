@@ -6,5 +6,5 @@ import com.learn.chapter4.po.LectureBean;
  * Created by bright on 17-1-20.
  */
 public interface LectureMapper {
-    public LectureBean getLecture(String lectureId);
+    public LectureBean getLecture(int lectureId);
 }

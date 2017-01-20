@@ -8,5 +8,5 @@ import java.util.List;
  * Created by bright on 17-1-20.
  */
 public interface StudentLectureMapper {
-    List<StudentLectureBean> findStudentLectureByStuId(String studentId);
+    List<StudentLectureBean> findStudentLectureByStuId(int studentId);
 }
