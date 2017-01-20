@@ -2,6 +2,8 @@ package com.learn.chapter4.po;
 
 import com.learn.chapter3.enums.Sex;
 
+import java.util.List;
+
 /**
  * Created by bright on 17-1-19.
  */
@@ -10,6 +12,7 @@ public class StudentBean {
     private String cnname;
     private Sex sex;
     private String note;
+    private List<StudentLectureBean> studentLectureList;
     private StudentSelfcardBean studentSelfcardBean;
 
     public int getId() {
@@ -50,6 +53,13 @@ public class StudentBean {
 
     public void setStudentSelfcardBean(StudentSelfcardBean studentSelfcardBean) {
         this.studentSelfcardBean = studentSelfcardBean;
+    }
+    public List<StudentLectureBean> getStudentLectureList() {
+        return studentLectureList;
+    }
+
+    public void setStudentLectureList(List<StudentLectureBean> studentLectureList) {
+        this.studentLectureList = studentLectureList;
     }
 
 }

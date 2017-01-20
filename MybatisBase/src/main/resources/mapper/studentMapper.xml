@@ -9,6 +9,7 @@
         <result property="sex" column="sex" jdbcType="INTEGER" javaType="com.learn.chapter4.enums.Sex" typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
         <result property="note" column="note"/>
         <association property="studentSelfcardBean" column="id" select="com.learn.chapter4.mapper.StudentSelfcardMapper.findStudentSelfcardByStudentId"/>
+        <collection property="studentLectureList" column="id" select="com.learn.chapter4.mapper.StudentLectureMapper.findStudentLectureByStuId"/>
     </resultMap>
 
     <select id="getStudent" parameterType="int" resultMap="studentMap">
